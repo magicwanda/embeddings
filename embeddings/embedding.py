@@ -85,7 +85,7 @@ class Embedding:
         """
         if path.dirname(fname) and not path.isdir(path.dirname(fname)):
             makedirs(path.dirname(fname))
-        db = sqlite3.connect(fname)
+        db = sqlite3.connect(fname, check_same_thread=False)
         c = db.cursor()
         c.execute('create table if not exists embeddings(word text primary key, emb blob)')
         db.commit()
@@ -100,7 +100,7 @@ class Embedding:
         tempfile.seek(0)
 
         # Create a database in memory and import from tempfile
-        self.db = sqlite3.connect(":memory:")
+        self.db = sqlite3.connect(":memory:", check_same_thread=False)
         self.db.cursor().executescript(tempfile.read())
         self.db.commit()
         self.db.row_factory = sqlite3.Row
