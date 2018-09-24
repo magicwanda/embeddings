@@ -31,7 +31,7 @@ Installation
 .. code-block:: sh
 
     pip install embeddings  # from pypi
-    pip install git+https://github.com/vzhong/embeddings.git  # from github
+    pip install git+https://github.com/magicwanda/embeddings.git  # from github
 
 
 Usage
