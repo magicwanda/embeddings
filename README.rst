@@ -30,9 +30,9 @@ Installation
 
 .. code-block:: sh
 
-    pip install embeddings  # from pypi
+    
     pip install git+https://github.com/magicwanda/embeddings.git  # from github
-
+    #This is just a minor changed version of vzhong's original embeddings package. I had problems with the connection to the db when using this in a Flask webapp.
 
 Usage
 -----
