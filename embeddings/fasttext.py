@@ -77,7 +77,7 @@ class FastTextEmbedding(Embedding):
 
 if __name__ == '__main__':
     from time import time
-    emb = FastTextEmbedding('en', show_progress=True)
+    emb = FastTextEmbedding('ro', show_progress=True)
     for w in ['canada', 'vancouver', 'toronto']:
         start = time()
         print('embedding {}'.format(w))
